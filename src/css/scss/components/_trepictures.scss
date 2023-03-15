@@ -1,0 +1,36 @@
+.trepictures {
+    display: flex;
+    justify-content: space-between;
+
+       
+
+    .grid-container {
+         
+    }
+    .grid{
+         display: grid;
+         grid-template-columns: auto auto auto;
+         grid-template-rows: 80px 400px;
+         gap: 10px;
+         padding: 10px;
+         height: 417px;
+         display: grid;
+         //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         gap: 430px;
+        
+    
+
+    .box {
+        // display: grid;
+        // grid-template-columns: auto auto auto;
+        // grid-template-rows: 80px 400px;
+        // gap: 10px;
+        // padding: 10px;
+        // height: 417px;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(200px,  1fr));
+        // gap: 30px;
+        // border: 2px solid black;
+    }
+    }
+}
