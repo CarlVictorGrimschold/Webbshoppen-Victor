@@ -18,8 +18,14 @@
   background-color: #f3f3f3;
   padding: 20px;
   
+  .btn4{
+    @include font-title-2;
+  }
+  
   .content{
     text-align: center;
+    padding-top: 50px;
+    
   }
 
   .red-border{

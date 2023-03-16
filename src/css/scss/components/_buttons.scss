@@ -1,7 +1,6 @@
 button {
     border: none;
 }
-
 .btn-theme {
     @include theme-colors;
     padding: 20px 80px;
@@ -10,6 +9,10 @@ button {
     display: inline-block;
     transition: background-color 0.25s;
     position: relative;
+    @include xl {
+       opacity: 0;
+    }
+    
 
     &::before {
         content: "";
@@ -34,11 +37,16 @@ button {
     }
 
     &:hover {
-        @include dark-colors;
+        @include theme-colors;
         text-decoration: none;
+        @include xl {
+            opacity: 1;
+         }
+         
+        
     }
-
-    .btn-theme {
+}
+    .btn-theme3 {
         @include theme-colors;
         padding: 20px 80px;
         text-decoration: none;
@@ -46,6 +54,8 @@ button {
         display: inline-block;
         transition: background-color 0.25s;
         position: relative;
+        opacity: 1;
+        
 
         &::before {
             content: "";
@@ -72,10 +82,11 @@ button {
         &:hover {
             @include dark-colors;
             text-decoration: none;
+            opacity: 1;
         }
     }
 
-}
+
 
 .btn-theme2 {
     @include secundary-theme-colour;

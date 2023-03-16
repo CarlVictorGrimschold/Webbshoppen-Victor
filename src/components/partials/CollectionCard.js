@@ -10,7 +10,9 @@ const CollectionCard = ({item}) => {
             <img src={item.imageUrl} alt={item.name} />
             <nav className="icons">
                 <a className="link" href="#"><i className="fa-regular fa-heart"></i></a>
+                <a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a>
                 <a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a>
+                
             </nav>
             <NavLink className="btn-theme" to="/products/">QUICK VIEW</NavLink>
         </div>

@@ -9,7 +9,7 @@ const Showcase = () => {
                   <div className="title-2">GET UP TO 40% OFF</div>
                   <div className="title-1">Don't Miss This Opportunity</div>
                   <div className="title-3">Online shopping free home delivery over $100</div>
-                  <a className="btn-theme" href="#">SHOP NOW</a>
+                  <a className="btn-theme3" href="#">SHOP NOW</a>
               </div>
               <img src={ShowcaseImg} alt="showcase image" />
         </div>

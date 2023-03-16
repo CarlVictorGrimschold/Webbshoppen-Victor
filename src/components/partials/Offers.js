@@ -9,7 +9,7 @@ const Offers = () => {
         <div className ="offer">
             <div className="red-border">
                 <div className="content">
-                    <h1>50% Offer</h1>
+                    <h1 className="btn4">50% Offer</h1>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem apriam eaque ipsa quae ab illo inventore</p>
                     <a className="btn-theme2" href="#">FLASH SALE</a>
                 </div>
