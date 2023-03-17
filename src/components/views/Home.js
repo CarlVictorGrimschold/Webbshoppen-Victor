@@ -4,6 +4,8 @@ import CollectionGrid from '../partials/CollectionGrid'
 import Header from '../partials/Header'
 import Showcase from '../partials/Showcase'
 import Offers from '../partials/Offers'
+import Footer from '../partials/Footer'
+
 
 const Home = () => {
   const { featured, latest, popular, getFeaturedAsync, getLatestAsync, getPopularAsync } = useProductContext()
@@ -21,8 +23,10 @@ const Home = () => {
       
         <CollectionGrid title="Featured Products" items={featured} />
         <Offers />
-        {/* <CollectionGrid title="New Products" items={latest} /> */}
-        {/* <CollectionGrid title="Popular Products" items={popular} /> */}
+        <CollectionGrid title="New Products" items={latest} /> 
+        <CollectionGrid title="Popular Products" items={popular} />
+        <Footer/> 
+       
     </>
   )
 }
