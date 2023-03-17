@@ -4,6 +4,7 @@ import CollectionGrid from '../partials/CollectionGrid'
 import Header from '../partials/Header'
 import Showcase from '../partials/Showcase'
 import Offers from '../partials/Offers'
+import NewProducts from '../partials/NewProducts'
 import Footer from '../partials/Footer'
 
 
@@ -23,9 +24,10 @@ const Home = () => {
       
         <CollectionGrid title="Featured Products" items={featured} />
         <Offers />
-        <CollectionGrid title="New Products" items={latest} /> 
-        <CollectionGrid title="Popular Products" items={popular} />
-        <Footer/> 
+        {/* <CollectionGrid title="New Products" items={latest} /> 
+        <CollectionGrid title="Popular Products" items={popular} /> */}
+        <NewProducts />
+        <Footer /> 
        
     </>
   )

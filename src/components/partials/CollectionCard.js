@@ -8,6 +8,7 @@ const CollectionCard = ({item}) => {
     <div className="collection-card">
         <div className="image-section">
             <img src={item.imageUrl} alt={item.name} />
+            <div className="buttoncrew">
             <nav className="icons">
                 <a className="link" href="#"><i className="fa-regular fa-heart"></i></a>
                 <a className="link" href="#"><i className="fa-regular fa-code-compare"></i></a>
@@ -15,6 +16,7 @@ const CollectionCard = ({item}) => {
                 
             </nav>
             <NavLink className="btn-theme" to="/products/">QUICK VIEW</NavLink>
+        </div>
         </div>
         <div className="body-section">
             <p className="body-category">{item.category}</p>
