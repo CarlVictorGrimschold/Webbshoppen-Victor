@@ -5,7 +5,9 @@ import Header from '../partials/Header'
 import Showcase from '../partials/Showcase'
 import Offers from '../partials/Offers'
 import NewProducts from '../partials/NewProducts'
+import Service from '../partials/Service'
 import Footer from '../partials/Footer'
+
 
 
 const Home = () => {
@@ -27,6 +29,7 @@ const Home = () => {
         {/* <CollectionGrid title="New Products" items={latest} /> 
         <CollectionGrid title="Popular Products" items={popular} /> */}
         <NewProducts />
+       <Service />
         <Footer /> 
        
     </>

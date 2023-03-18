@@ -1,0 +1,35 @@
+.service {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    .bottom1 {
+         display: grid;
+        place-items: center;
+        width: 200px;
+        text-align: center;
+        border: 3px solid black;
+        // align-items: center;
+        // grid-template-columns: 1fr;
+        .link {
+            text-align: center;
+            position: relative;
+            height: 36px;
+            width: 36px;
+            @include content-center;
+            @include default-colors;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 0 5px 2px $color-shadow-1;
+            margin-left: 1rem;
+            transition: background-color 0.25s, color 0.20s;
+
+            &:hover,
+            &.active {
+                @include dark-colors;
+                text-decoration: none;
+            }
+        }
+
+    }
+}
