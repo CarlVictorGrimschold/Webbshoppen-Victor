@@ -3,12 +3,21 @@
     place-items: center;
     align-items: center;
     grid-template-columns: 1fr;
+    @include lg {
+        display: flex !important;
+        justify-content: center;
+        //  align-items: center;
+        
+    }
     .bottom1 {
-         display: grid;
+        display: grid;
         place-items: center;
         width: 200px;
         text-align: center;
-        border: 3px solid black;
+        margin-top: 40px;
+        margin-bottom: 20px;
+     //   border: 3px solid black;
+       
         // align-items: center;
         // grid-template-columns: 1fr;
         .link {
@@ -23,13 +32,23 @@
             box-shadow: 0 0 5px 2px $color-shadow-1;
             margin-left: 1rem;
             transition: background-color 0.25s, color 0.20s;
-
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             &:hover,
             &.active {
                 @include dark-colors;
                 text-decoration: none;
+                
+
+                }
+                
+            }
+            .miniparagraf{
+                @include default-colors;
+               // border: 3px solid black;
+                @include font-title-4;
+                
             }
         }
-
+        
     }
-}
+    

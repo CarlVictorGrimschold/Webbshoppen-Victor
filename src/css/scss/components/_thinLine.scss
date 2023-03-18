@@ -1,0 +1,21 @@
+.line-container {
+    display: flex;
+    justify-content: center;
+
+    .thin-line {
+        border: none;
+        height: 1px;
+        background-color: black;
+        width: 90%;
+
+        @include lg {
+            font-size: 1.1em;
+            width: 80%;
+        }
+
+        @include xl {
+            font-size: 1.1em;
+            width: 50%;
+        }
+    }
+}
