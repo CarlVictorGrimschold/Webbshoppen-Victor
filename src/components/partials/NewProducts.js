@@ -15,7 +15,7 @@ const NewProducts = () => {
         <div className='new-products'>
           <div className='banner-section new-banner'>
             <div className='banner-title'>2 FOR USD $29</div>
-            <button className='btn-secondary'><span>NEW PRODUCTS</span></button>
+            <button className='btn-theme4'><span>NEW PRODUCTS</span></button>
           </div>
           <CollectionGrid title="" items={latest} />
         </div>
@@ -23,7 +23,7 @@ const NewProducts = () => {
           <CollectionGrid title="" items={popular} />
           <div className='banner-section pop-banner'>
             <div className='banner-title'>2 FOR USD $49</div>
-            <button className='btn-secondary'><span>POPULAR PRODUCTS</span></button>
+            <button className='btn-theme4'><span>POPULAR PRODUCTS</span></button>
           </div>
         </div>
       </section>
