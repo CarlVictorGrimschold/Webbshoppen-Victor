@@ -48,6 +48,7 @@
                     position: absolute;
                     top: 15px;
                     right: 15px; 
+                    
 
                     .link {
                         height: 50px;
@@ -64,12 +65,14 @@
                         margin-left: 1rem;
                         transition: background-color 0.25s, color 0.20s;
                         margin-bottom: 1rem;
+                       
                     
                         &:hover,
                         &:active {
                             background-color: #222529;
                             color: #ffffff;
-                            text-decoration: none;
+                             text-decoration: none;
+                             
                         }
                     }
                 

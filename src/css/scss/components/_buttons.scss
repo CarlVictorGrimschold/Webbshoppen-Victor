@@ -9,6 +9,7 @@ button {
     display: inline-block;
     transition: background-color 0.25s;
     position: relative;
+    
     @include xl {
        opacity: 0;
     }
@@ -37,10 +38,12 @@ button {
     }
 
     &:hover {
-        @include theme-colors;
+        @include dark-colors;
         text-decoration: none;
+            
         @include xl {
-            opacity: 1;
+            @include theme-colors;
+            opacity: 100%;
          }
          
         
