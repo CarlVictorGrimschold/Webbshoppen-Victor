@@ -15,7 +15,6 @@ button {
         opacity: 100%;
     }
 
-
     &::before {
         content: "";
         border-top: 2px solid $color-light-2;
@@ -61,7 +60,6 @@ button {
     position: relative;
     opacity: 1;
 
-
     &::before {
         content: "";
         border-top: 2px solid $color-light-2;
@@ -90,8 +88,6 @@ button {
         opacity: 1;
     }
 }
-
-
 
 .btn-theme2 {
     @include secundary-theme-colour;
@@ -139,7 +135,6 @@ button {
     display: inline-block;
     transition: background-color 0.25s;
     position: relative;
-
 
     &::before {
         content: "";

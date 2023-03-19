@@ -25,7 +25,6 @@
             padding: 0;
             height: 100%;
         }
-
     }
 
     .collection-grid {
@@ -48,6 +47,7 @@
                 grid-template-columns: 1fr 1fr 1fr;
 
             }
+
             .btn-theme {
                 white-space: nowrap;
             }
@@ -94,6 +94,5 @@
         .pop-banner {
             grid-area: banner;
         }
-
     }
 }
