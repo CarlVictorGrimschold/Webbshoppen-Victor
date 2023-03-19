@@ -2,10 +2,6 @@
     display: flex;
     justify-content: space-between;
 
-
-
-    .grid-container {}
-
     .grid {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -14,7 +10,7 @@
         padding: 10px;
         height: 417px;
         display: grid;
-        //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
         gap: 430px;
 
 
