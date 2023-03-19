@@ -1,47 +1,51 @@
 import React, { useState } from 'react'
 
 const ContactForm = () => {
-  const defaultValues = { name: '', email: '', comments: '' }
-  const [form, setForm] = useState(defaultValues)
-  const [errors, setErrors] = useState(defaultValues)
+  const [name, setName] = useState('')
+  const [nameError, setNameError] = useState('')
+  const [email, setEmail] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [comments, setComments] = useState('')
+  const [commentsError, setCommentsError] = useState('')
 
   const validateName = (value) => {
-    if (value.length < 2)
-      setErrors(current => ({...current, name: 'a valid name is required'}))
+    const regEx = /^[A-Z][-a-zA-Z\s]{3,}$/;
+    if (!regEx.test(value))
+      setNameError('Your name must be valid')
     else
-      setErrors(current => ({...current, name: ''}))
+      setNameError('')
   }
 
   const validateEmail = (value) => {
     const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!regEx.test(value))
-      setErrors(current => ({...current, email: 'a valid email is required'}))
+      setEmailError('Your email must be valid')
     else
-      setErrors(current => ({...current, email: ''}))
+      setEmailError('')
   }
 
   const validateComments = (value) => {
-    if (value.length < 5)
-      setErrors(current => ({...current, comments: 'a valid comment required'}))
+
+    if (value.length < 5 || value.length > 500)
+      setCommentsError('Helloooooo!!! Your comment must be at least 5 characters long and max 500 characters long.')
     else
-      setErrors(current => ({...current, comments: ''}))
+      setCommentsError('')
   }
 
   const onChangeHandler = (e) => {
-    const {id, value, required} = e.target
-    setForm(current => ({...current, [id]: value}))
-
-
-    switch(id) {
+    switch (e.target.id) {
       case 'name':
+        setName(e.target.value)
         validateName(e.target.value)
         break;
 
       case 'email':
+        setEmail(e.target.value)
         validateEmail(e.target.value)
         break;
 
       case 'comments':
+        setComments(e.target.value)
         validateComments(e.target.value)
         break;
     }
@@ -50,48 +54,55 @@ const ContactForm = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault()
 
-    if (form.name !== '' && form.email !== '' && form.comments !== '') {
-      if (errors.name === '' && errors.email === '' && errors.comments === '') {
-        
+    if (name.length > 0 && email.length > 0 && comments.length > 0) {
+      if (nameError.length === 0 && emailError.length === 0 && commentsError.length === 0) {
+
+        const contactForm = {
+          name: name,
+          email: email,
+          comments: comments
+        }
+
         const res = await fetch('https://kyh-net22.azurewebsites.net/api/contacts', {
           method: 'post',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(form)
+          body: JSON.stringify(contactForm)
         })
 
         if (res.status === 200) {
-          console.log('förfrågan har skickats.')
-          setForm(defaultValues)
-          setErrors(defaultValues)
+          alert('Förfrågan har skickats.');
+          setName('')
+          setEmail('')
+          setComments('')
         }
-      } 
+      }
     }
   }
 
 
   return (
     <section className="contact-form">
-        <div className="container">
-            <h1>Come in Contact with Us</h1>
-            <form onSubmit={onSubmitHandler} noValidate>
-                <div className="contact-form-name">
-                    <input id="name" type="text" placeholder="Your Name" value={form.name} onChange={onChangeHandler} />
-                    <div className="error">{errors.name}</div>
-                </div>
-                <div className="contact-form-email">
-                    <input id="email" type="email" placeholder="Your Mail" value={form.email} onChange={onChangeHandler} />
-                    <div className="error">{errors.email}</div>
-                </div>
-                <div className="contact-form-comments">
-                    <textarea id="comments" placeholder="Comments" value={form.comments} onChange={onChangeHandler}></textarea>
-                    <div className="error">{errors.comments}</div>
-                </div>
-                
-                <button className="btn-theme" type="submit">Post Comments</button>
-            </form>
-        </div>
+      <div className="container">
+        <h1>Come in Contact with Us</h1>
+        <form onSubmit={onSubmitHandler} noValidate>
+          <div className="contact-form-name">
+            <input id="name" type="text" placeholder="Your Name" value={name} onChange={onChangeHandler} />
+            <div className="error">{nameError}</div>
+          </div>
+          <div className="contact-form-email">
+            <input id="email" type="email" placeholder="Your Mail" value={email} onChange={onChangeHandler} />
+            <div className="error">{emailError}</div>
+          </div>
+          <div className="contact-form-comments">
+            <textarea id="comments" placeholder="Comments" value={comments} onChange={onChangeHandler}></textarea>
+            <div className="error">{commentsError}</div>
+          </div>
+
+          <button className="btn-theme3" type="submit">Post Comments</button>
+        </form>
+      </div>
     </section>
   )
 }

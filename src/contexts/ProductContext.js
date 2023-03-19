@@ -6,7 +6,7 @@ export const useProductContext = () => {
     return useContext(ProductContext)
 }
 
-export const ProductProvider = ({children}) => {
+export const ProductProvider = ({ children }) => {
     const [apiUrl, setApiUrl] = useState("https://kyh-net22.azurewebsites.net/api/products")
     const [all, setAll] = useState([])
     const [featured, setFeatured] = useState([])
@@ -35,7 +35,7 @@ export const ProductProvider = ({children}) => {
         setProduct(await res.json())
     }
 
-    return <ProductContext.Provider value={{all, featured, latest, popular, product, getAllAsync, getFeaturedAsync, getLatestAsync, getPopularAsync, getProductAsync}}>
+    return <ProductContext.Provider value={{ all, featured, latest, popular, product, getAllAsync, getFeaturedAsync, getLatestAsync, getPopularAsync, getProductAsync }}>
         {children}
     </ProductContext.Provider>
 }

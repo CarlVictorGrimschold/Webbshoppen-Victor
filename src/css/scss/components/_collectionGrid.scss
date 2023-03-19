@@ -1,14 +1,12 @@
 .collection-grid {
-    .container {
-
-    }
+    .container {}
 
     .title {
-        font-size: 20px;   
+        font-size: 20px;
         font-weight: 700;
         text-align: center;
-        margin-top: 40px;     
-        margin-bottom: 30px;     
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
 
     .collection {
@@ -19,6 +17,7 @@
         @include lg {
             grid-template-columns: 1fr 1fr 1fr;
         }
+
         @include xl {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
@@ -31,72 +30,72 @@
                 img {
                     position: relative;
                     width: 100%;
-                    object-fit: cover; 
-                }
-                .buttoncrew{
-                    
-                    @include lg {
-                        
-                    }
-    
-                    
-
-
-                
-
-                .icons {
-                    position: absolute;
-                    top: 15px;
-                    right: 15px; 
-                    
-
-                    .link {
-                        height: 50px;
-                        width: 50px;
-                        font-size: 22px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: #ffffff;
-                        color:#222529;
-                        border-radius: 50%;
-                        text-decoration: none;
-                        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
-                        margin-left: 1rem;
-                        transition: background-color 0.25s, color 0.20s;
-                        margin-bottom: 1rem;
-                       
-                    
-                        &:hover,
-                        &:active {
-                            background-color: #222529;
-                            color: #ffffff;
-                             text-decoration: none;
-                             
-                        }
-                    }
-                
-                    @include xl {
-                        opacity: 0%;
-                        transition: all 0.15s;
-                        
-                        &:hover, 
-                        &:active {
-                            opacity: 100%;
-                            
-                        }
-                    }
+                    object-fit: cover;
                 }
 
-                .btn-theme {
-                    position: absolute;
-                    bottom: 0px;
-                    left: 0;
-                    right: 0;
-                    text-align: center;
+                .buttoncrew {
+
+                    @include lg {}
+
+
+
+
+
+
+                    .icons {
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+
+
+                        .link {
+                            height: 50px;
+                            width: 50px;
+                            font-size: 22px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #ffffff;
+                            color: #222529;
+                            border-radius: 50%;
+                            text-decoration: none;
+                            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+                            margin-left: 1rem;
+                            transition: background-color 0.25s, color 0.20s;
+                            margin-bottom: 1rem;
+
+
+                            &:hover,
+                            &:active {
+                                background-color: #222529;
+                                color: #ffffff;
+                                text-decoration: none;
+
+                            }
+                        }
+
+                        @include xl {
+                            opacity: 0%;
+                            transition: all 0.15s;
+
+                            &:hover,
+                            &:active {
+                                opacity: 100%;
+
+                            }
+                        }
+                    }
+
+                    .btn-theme {
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                    }
                 }
             }
-        }
+
             .body-section {
                 text-align: center;
 
@@ -106,14 +105,17 @@
                     color: $color-dark-3;
                     margin-top: 15px;
                 }
+
                 .body-title {
                     font-size: 20px;
                     font-weight: 700;
                 }
+
                 .body-rating {
                     color: $color-theme;
                     font-size: 20px;
                 }
+
                 .body-price {
                     font-size: 22px;
                     font-weight: 700;

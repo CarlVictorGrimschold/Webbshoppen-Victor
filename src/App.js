@@ -1,5 +1,5 @@
 import './css/style.min.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/views/Home';
 import Contacts from './components/views/Contacts';
 import Products from './components/views/Products';

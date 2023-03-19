@@ -14,16 +14,16 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "name"
-                             "email"
-                             "comments"
-                             "button";
+            "email"
+            "comments"
+            "button";
         gap: 20px;
 
         @include md {
             grid-template-columns: 1fr 1fr;
             grid-template-areas: "name email"
-                                 "comments comments"
-                                 "button empty";
+                "comments comments"
+                "button empty";
         }
 
         .error {

@@ -24,9 +24,11 @@
         .title-1 {
             @include font-title-1;
         }
+
         .title-2 {
             @include font-title-2;
         }
+
         .title-3 {
             @include font-title-3;
         }
@@ -37,7 +39,7 @@
         margin-right: -50px;
         max-height: 745px;
         width: auto;
-    
+
         @include xl {
             display: block;
         }

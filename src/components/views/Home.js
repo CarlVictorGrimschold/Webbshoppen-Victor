@@ -23,18 +23,15 @@ const Home = () => {
 
   return (
     <>
-        <Header />
-        <Showcase />
-      
-        <CollectionGrid title="Featured Products" items={featured} />
-        <Offers />
-        {/* <CollectionGrid title="New Products" items={latest} /> 
-        <CollectionGrid title="Popular Products" items={popular} /> */}
-        <NewProducts />
-       <ThinLine />
-       <Service />
-        <Footer /> 
-       
+      <Header />
+      <Showcase />
+      <CollectionGrid title="Featured Products" items={featured} />
+      <Offers />
+      <NewProducts />
+      <ThinLine />
+      <Service />
+      <Footer />
+
     </>
   )
 }

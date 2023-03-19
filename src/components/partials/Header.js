@@ -12,7 +12,7 @@ const Header = () => {
         <div id="menu" className={hideMenu ? 'hide' : ''}>
           <nav id="menu-links" className="links">
             <NavLink className="link" to="/">Home</NavLink>
-          
+
             <NavLink className="link" to="/contacts">Contacts</NavLink>
           </nav>
           <nav id="menu-icons" className="icons">
@@ -20,7 +20,7 @@ const Header = () => {
             <NavLink className="link" to="/compare"><i className="fa-regular fa-code-compare"></i></NavLink>
             <NavLink className="link" to="/favorites"><i className="fa-regular fa-heart"></i><span class="menu-badge">1</span></NavLink>
             <NavLink className="link" to="/cart"><i className="fa-regular fa-bag-shopping"></i><span class="menu-badge">3</span></NavLink>
-            
+
           </nav>
         </div>
         <div id="toggle-icon" className="icons">
